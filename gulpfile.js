@@ -12,7 +12,7 @@ const replace = require("gulp-replace");
 
 const src = {
   sassPath: "sass/**/*.scss",
-  htmlPath: "src/*.html",
+  htmlPath: "src/**/*.html",
   distPath: "css",
   htmlDistPath: "html",
   mapPath: ".",
@@ -67,6 +67,7 @@ gulp.task("browser-sync", () => {
   browsersync.init({
     server: "./",
     files: "./",
+    startPath: "./html/index.html",
     watchEvents: ["add", "change"],
   });
 });
